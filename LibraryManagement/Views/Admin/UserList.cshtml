@@ -1,0 +1,45 @@
+﻿@using LibraryManagement.Models.ViewModels
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model List<UserViewModel>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Kullanıcı Adı</th>
+            <th>Email</th>
+            <th>İşlemler</th>
+            <th><a asp-controller="User" asp-action="Create">Kullanıcı Oluştur</a></th>
+
+        </tr>
+    </thead>
+
+
+    <tbody>
+
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.UserName</td>
+                <td>@item.Email</td>
+                <td>
+                    <a asp-controller="User" asp-action="UpdateUser" asp-route-id="@item.Id">Güncelle</a>  <a asp-controller="User" asp-action="DeleteUser" asp-route-id="@item.Id">Sil</a>
+                </td>
+                <td>
+                    <a asp-controller="Role" asp-action="AssignRoleToUser" asp-route-id="@item.Id">Rol ata</a>
+                </td>
+
+
+            </tr>
+        }
+
+
+
+    </tbody>
+</table>
