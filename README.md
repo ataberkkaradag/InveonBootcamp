@@ -14,6 +14,9 @@ Proje, Entity Framework Core, Repository Pattern, Unit of Work Pattern ve Identi
 
 - Kitap bilgilerini listeleyin.
 - Kitap detay bilgilerini listeleyin.
+- `/Book`  
+- `/Book/Detail/{id}`
+
 
 *Kullanıcı Yönetimi*:
 ------------------------------------------------------------------------
@@ -49,9 +52,14 @@ Admin Paneline Erişim
 Admin paneline erişmek için, Admin rolüne sahip bir kullanıcı ile giriş yapmanız gerekmektedir. Admin kullanıcıları için başlangıç bilgileri şu şekildedir:
 migration yaptıktan sonra ulaşılabilir.
 
+
 *Kullanıcı Adı*: admin
 ----------------------------------------
 *Şifre*: Admin1234*
 -----------------------------------------
+- `/Admin/UserList`  
+- `/Admin/RoleList`
+Sayfalarından admin ile ilgili bütün işlemler yapılabilir.
+
 
 
